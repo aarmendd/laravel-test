@@ -22,19 +22,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/posts/{post}', function($post){
-    $posts = [
-        'first-post' => 'Hello this is the first post',
-        'second-post' => 'Hello this is the second post'
-    ];
 
-    if (! array_key_exists($post, $posts)){
-        abort(404, 'Post not found!');
-    } 
-        
-    
-
-    return view('post', [
-        'post' => $posts[$post]
-    ]);
-});
+Route::get('posts/{post}', 'PostsController@show');
