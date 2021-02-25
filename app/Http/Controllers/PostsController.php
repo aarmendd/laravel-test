@@ -8,21 +8,12 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
-    public function show($post)
+    public function show($slug)
     {
-        $posts = [
-        'first-post' => 'Hello this is the first post',
-        'second-post' => 'Hello this is the second post'
-    ];
-
-        if (! array_key_exists($post, $posts)) {
-            abort(404, 'Post not found!');
-        }
-
-
+        $post = \DB::table('posts')->where('slug',$slug)->first();
 
         return view('post', [
-        'post' => $posts[$post]
+        'post' => $post
     ]);
     }
 }
