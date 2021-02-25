@@ -64,7 +64,6 @@
         </style>
     </head>
     <body>
-        @yield('welcome')
         @yield('contact')
     </body>
 </html>
