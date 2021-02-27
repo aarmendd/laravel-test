@@ -43,6 +43,8 @@ Route::get('articles', 'ArticlesController@index');
 Route::post('articles','ArticlesController@store'); // after submiting the form in articles/create it makes a post request
 Route::get('articles/create', 'ArticlesController@create'); //should put articles/create about the show
 Route::get('articles/{article}', 'ArticlesController@show');
+Route::get('articles/{article}/edit', 'ArticlesController@edit');
+Route::put('articles/{article}','ArticlesController@update');
 
 // GET /articles
 // Get /articles/:id
