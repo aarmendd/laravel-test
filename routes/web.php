@@ -41,3 +41,19 @@ Route::get('/about', function () {
 Route::get('posts/{post}', 'PostsController@show');
 Route::get('articles', 'ArticlesController@index');
 Route::get('articles/{article}', 'ArticlesController@show');
+
+// GET /articles
+// Get /articles/:id
+// POST /articles
+// PUT /articles/:id 
+// DELETE /articles/:id 
+
+// GET /videos
+// GET /videos/:id 
+// GET /videos/create -> display a form to create
+// POST /videos -> when we submit a form to create a resource it makes a POST request
+// GET /videos/:id/edit -> display a form to edit
+// PUT /videos/:id 
+// DELETE /videos/:id 
+
+// POST /videos/subrscriptions => VideoSubscriptionsController@store
