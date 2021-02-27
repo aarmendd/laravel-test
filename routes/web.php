@@ -40,6 +40,8 @@ Route::get('/about', function () {
 
 Route::get('posts/{post}', 'PostsController@show');
 Route::get('articles', 'ArticlesController@index');
+Route::post('articles','ArticlesController@store'); // after submiting the form in articles/create it makes a post request
+Route::get('articles/create', 'ArticlesController@create'); //should put articles/create about the show
 Route::get('articles/{article}', 'ArticlesController@show');
 
 // GET /articles
