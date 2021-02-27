@@ -28,7 +28,11 @@ class ArticlesController extends Controller
 
     public function store(){
         // validation
-
+        request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required',
+        ]);
         //clean up
         $article = new Article();
 
@@ -49,6 +53,12 @@ class ArticlesController extends Controller
     }
 
     public function update($id){
+        request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required',
+        ]);
+
         $article = Article::find($id);
 
         $article->title = request('title');
