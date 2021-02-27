@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    //
+    // // if we want to use title as url
+    // public function getRouteKeyName(){
+    //     return 'title';
+    // }
 }

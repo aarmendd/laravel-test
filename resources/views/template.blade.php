@@ -19,7 +19,7 @@ Released   : 20140225
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 <link href="/default.css" rel="stylesheet"  />
 <link href="/fonts.css" rel="stylesheet" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" rel="stylesheet" />
+{{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" rel="stylesheet" /> --}}
 
 </head>
 <body>
