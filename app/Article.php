@@ -10,4 +10,7 @@ class Article extends Model
     // public function getRouteKeyName(){
     //     return 'title';
     // }
+
+    // for the mass asignment protection
+    protected $fillable = ['title', 'excerpt', 'body'];
 }
