@@ -13,4 +13,9 @@ class Article extends Model
 
     // for the mass asignment protection
     protected $fillable = ['title', 'excerpt', 'body'];
+
+    public function path()
+    {
+        return route('articles.show', $this);
+    }
 }
