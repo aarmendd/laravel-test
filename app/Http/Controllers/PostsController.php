@@ -13,6 +13,6 @@ class PostsController extends Controller
     {
         return view('post', [
             'post' =>  Post::where('slug', $slug)->firstOrFail()
-    ]);
+        ]);
     }
 }

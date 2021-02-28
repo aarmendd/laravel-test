@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    
+
     // return view('test', [
     //     'name' => request('name')
     // ]);
-    
+
     return view('welcome');
 });
 
@@ -31,7 +31,7 @@ Route::get('/about', function () {
     // $articles = App\Article::paginate(2);
     // $articles = App\Article::latest()->get();
 
-    return view('about',[
+    return view('about', [
         'articles' => App\Article::take(3)->latest()->get()
     ]);
 });
@@ -40,11 +40,11 @@ Route::get('/about', function () {
 
 Route::get('posts/{post}', 'PostsController@show');
 Route::get('articles', 'ArticlesController@index');
-Route::post('articles','ArticlesController@store'); // after submiting the form in articles/create it makes a post request
+Route::post('articles', 'ArticlesController@store'); // after submiting the form in articles/create it makes a post request
 Route::get('articles/create', 'ArticlesController@create'); //should put articles/create about the show
 Route::get('articles/{article}', 'ArticlesController@show');
 Route::get('articles/{article}/edit', 'ArticlesController@edit');
-Route::put('articles/{article}','ArticlesController@update');
+Route::put('articles/{article}', 'ArticlesController@update');
 
 // GET /articles
 // Get /articles/:id

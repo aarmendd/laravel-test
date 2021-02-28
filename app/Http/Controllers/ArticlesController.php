@@ -7,24 +7,28 @@ use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
-    public function index(Article $articles){
+    public function index()
+    {
         // index() action Render a list of a resource
         $articles = Article::latest()->get();
 
-        return view('articles.index',['articles'=>$articles]);
+        return view('articles.index', ['articles' => $articles]);
     }
 
-    public function show(Article $article){
+    public function show(Article $article)
+    {
         // show() - show a single resource
-        return view('articles.show',['article' => $article]);
+        return view('articles.show', ['article' => $article]);
     }
 
-    public function create(){
+    public function create()
+    {
         // Shows a view to create a new resource
         return view('articles.create');
     }
 
-    public function store(){
+    public function store()
+    {
         // validation
         request()->validate([
             'title' => 'required',
@@ -43,12 +47,14 @@ class ArticlesController extends Controller
         return redirect('/articles');
     }
 
-    public function edit(Article $article){
-               
-        return view('articles.edit',['article' => $article]);
+    public function edit(Article $article)
+    {
+
+        return view('articles.edit', ['article' => $article]);
     }
 
-    public function update(Article $article){
+    public function update(Article $article)
+    {
         request()->validate([
             'title' => 'required',
             'excerpt' => 'required',
@@ -64,7 +70,7 @@ class ArticlesController extends Controller
         return redirect('/articles/' . $article->id);
     }
 
-    public function destroy(){
-        
+    public function destroy()
+    {
     }
 }
