@@ -18,4 +18,10 @@ class Article extends Model
     {
         return route('articles.show', $this);
     }
+
+    public function author()
+    {
+        // if we want to call the user->author of the article we pass as a second argument the 'user_id'
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
