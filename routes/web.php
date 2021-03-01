@@ -61,3 +61,6 @@ Route::put('articles/{article}', 'ArticlesController@update');
 // DELETE /videos/:id 
 
 // POST /videos/subrscriptions => VideoSubscriptionsController@store
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
